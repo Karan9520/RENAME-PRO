@@ -1,0 +1,38 @@
+# Exported from Render on 2024-07-08T19:24:43Z
+services:
+- type: web
+  name: RENAME-PRO
+  runtime: python
+  repo: https://github.com/Karan9520/RENAME-PRO
+  plan: free
+  envVars:
+  - key: LOG_CHANNEL
+    sync: false
+  - key: BOT_USERNAME
+    sync: false
+  - key: STRING
+    sync: false
+  - key: BOT_PIC
+    sync: false
+  - key: FORCE_SUBS
+    sync: false
+  - key: DB_NAME
+    sync: false
+  - key: DB_URL
+    sync: false
+  - key: OWNER
+    sync: false
+  - key: API_HASH
+    sync: false
+  - key: API_ID
+    sync: false
+  - key: BOT_TOKEN
+    sync: false
+  - key: PORT
+    sync: false
+  - key: PYTHON_VERSION
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app & python3 bot.py
+version: "1"
